@@ -2,6 +2,9 @@ const chatBox = document.getElementById('chat-box');
 const userInput = document.getElementById('user-input');
 const sendButton = document.getElementById('send-button');
 
+// API 키를 직접 코드에 포함하는 대신, 보안상의 이유로 환경 변수나 비밀 저장소를 사용하는 것이 좋습니다.
+const OPENAI_API_KEY = 'sk-proj-FgpB8bWcactXvj3kjUAIT3BlbkFJInYgn5dqqTxSHYr5UQyJ';
+
 async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -14,7 +17,7 @@ async function sendMessage(message, retries = 5, delay = 5000) {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer sk-proj-3fIq7QoEqcl8UVlCpm8mT3BlbkFJVqBHnvY1PN579fMhjVvh` // 여기에 새로운 API 키를 입력합니다.
+                    'Authorization': `Bearer ${OPENAI_API_KEY}` // 새로운 API 키를 사용
                 },
                 body: JSON.stringify({
                     model: 'gpt-4', // GPT-4 모델을 사용합니다.
