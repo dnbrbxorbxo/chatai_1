@@ -5,7 +5,7 @@ let userName = '';  // 사용자의 이름을 저장할 변수
 let isUserNameSet = false; // 사용자 이름이 설정되었는지 확인하는 변수
 
 // 새로 생성된 OpenAI API 키
-const OPENAI_API_KEY = 'sk-proj-H3VOwlItvejpWUNB9oxGT3BlbkFJecqCmzcvd4mhzr694Y8w';
+const OPENAI_API_KEY = 'sk-proj-pObs6nayFUMl8LSrwmkXT3BlbkFJ69MC7BT8gQrNLm0xgkj7';
 
 async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
